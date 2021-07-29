@@ -6,7 +6,8 @@ const dy = dx * 2 / 3
 function setup() {
   createCanvas(w, w, SVG)
   strokeWeight(dx / 20)
-  background(233, 203, 130) // Lite Gold
+  // background(233, 203, 130) // Lite Gold
+  background(255); // White
 }
 
 function draw() {
@@ -15,7 +16,8 @@ function draw() {
     push()
     translate(0, dy / 2 + i * dy)
     noFill()
-    stroke(158, 122, 70) // Gold
+    // stroke(158, 122, 70) // Gold
+    stroke(29,21,107) // Deap Blue
     beginShape()
     for (let x = 0; x < width; x++) {
       let angle = map(x, 0, dx, 0, TWO_PI)
@@ -25,7 +27,7 @@ function draw() {
     endShape()
     pop()
   }
-  // save("mySVG.svg");
-  // print("saved svg");
-  // noLoop();
+  save("mySVG.svg");
+  print("saved svg");
+  noLoop();
 }
